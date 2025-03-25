@@ -1,6 +1,6 @@
 package uninter;
 
-public abstract class Moeda {
+public abstract class Moeda {	
 	double valor;
 	
 	public Moeda(double valor) {
@@ -24,4 +24,11 @@ public abstract class Moeda {
 		return Double.doubleToLongBits(valor) == Double.doubleToLongBits(other.valor);
 	}
 	
+	public static void menu() {
+		System.out.println("[ - Selecione a moeda: -- ]");
+		System.out.println("1. Real");
+		System.out.println("2. Dolar");
+		System.out.println("3. Euro");
+		System.out.println("[ ----------------------- ]");
+	}
 }

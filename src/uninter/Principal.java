@@ -9,19 +9,18 @@ public class Principal {
 		Cofrinho cofrinho = new Cofrinho();
 		
 		Scanner sc = new Scanner(System.in);
-		// Menu:
-		System.out.println("[ Cofrinho - Menu ]");
-		System.out.println("1. Adicionar moeda");
-		System.out.println("2. Remover moeda");
-		System.out.println("3. Listar todas as moedas");
-		System.out.println("4. Calcular total (em R$)");
-		System.out.println("0. Encerrar programa");
+		// Chama o menu do cofre:
+		cofrinho.menu();
 		int opcao = sc.nextInt();
 		
 		int tipoMoeda;
 		double valor;
 		Moeda moeda;
 		
+		/*
+		 * Repete o menu enquanto a condição não for satisfeita
+		 * 1-4 - opções do menu / 0 - encerra o programa
+		 */
 		while (opcao != 0) {
 			switch (opcao) {
 			case 1:
@@ -29,9 +28,8 @@ public class Principal {
 				tipoMoeda = 0;
 				
 				while (tipoMoeda <= 0 || tipoMoeda > 3) {
-					System.out.println("1. Real");
-					System.out.println("2. Dolar");
-					System.out.println("3. Euro");
+					// chama o menu da classe Moeda
+					Moeda.menu();
 					tipoMoeda = sc.nextInt();
 				}
 				
@@ -58,9 +56,7 @@ public class Principal {
 				tipoMoeda = 0;
 				
 				while (tipoMoeda <= 0 || tipoMoeda > 3) {
-					System.out.println("1. Real");
-					System.out.println("2. Dolar");
-					System.out.println("3. Euro");
+					Moeda.menu();
 					tipoMoeda = sc.nextInt();
 				}
 				
@@ -98,12 +94,7 @@ public class Principal {
 				System.out.println("Opção inválida.");
 			}
 			
-			System.out.println("[ Cofrinho - Menu ]");
-			System.out.println("1. Adicionar moeda");
-			System.out.println("2. Remover moeda");
-			System.out.println("3. Listar todas as moedas");
-			System.out.println("4. Calcular total (em R$)");
-			System.out.println("0. Encerrar programa");
+			cofrinho.menu();
 			opcao = sc.nextInt();
 		}
 		

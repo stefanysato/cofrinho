@@ -4,7 +4,6 @@ public class Dolar extends Moeda {
 
 	public Dolar(double valor) {
 		super(valor);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -14,7 +13,7 @@ public class Dolar extends Moeda {
 
 	@Override
 	public double converter() {
-		double total = valor * 5.75;
+		double total = valor * 5.68; // *em 25/03/2025
 		return total;
 	}
 
